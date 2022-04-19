@@ -40,7 +40,6 @@ def no_file(): #no file selected
 
 
 def finished_button(choice,file): #function for done! button
-    print(os.path.abspath(file))
     match os.path.basename(file)[-4:]:
         case ".mp3":
             try:
