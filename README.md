@@ -1,6 +1,6 @@
 # Audio-Converter
 ## Requirements
-[FFMPEG](https://ffmpeg.org/download.html)  
+[FFMPEG](https://www.geeksforgeeks.org/how-to-install-ffmpeg-on-windows/)  
 If you don't feel safe using the provided exe file you can use the python source file instead, just make sure you have the following modules (I recommend using pip to quickly install them):  
 tkinter - used for GUI  
 pydub - used for conversion  
