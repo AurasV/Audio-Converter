@@ -7,6 +7,7 @@ import os #file path
 
 
 window = Tk() #main window
+window.title("Audio Converter")
 window.resizable(False, False) #deny resizing
 frame = ttk.Frame( #gui frame
     master = window,
