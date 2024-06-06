@@ -70,16 +70,17 @@ def finished_button(choice, files, progress_bar):  # function for done! button
     for index, file in enumerate(files):
         file_extension = os.path.basename(file)[-4:].lower()
         try:
-            if file_extension == ".mp3":
-                song = AudioSegment.from_file(os.path.abspath(file), "mp3")  # mp3 format input
-            elif file_extension == ".ogg":
-                song = AudioSegment.from_file(os.path.abspath(file), "ogg")  # ogg format input
-            elif file_extension == ".wav":
-                song = AudioSegment.from_file(os.path.abspath(file), "wav")  # wav format input
-            elif file_extension == ".m4a":
-                song = AudioSegment.from_file(os.path.abspath(file), "m4a")  # m4a format input
-            else:
-                continue
+            match file_extension:
+                case ".mp3":
+                    song = AudioSegment.from_file(os.path.abspath(file), "mp3")  # mp3 format input
+                case ".ogg":
+                    song = AudioSegment.from_file(os.path.abspath(file), "ogg")  # ogg format input
+                case ".wav":
+                    song = AudioSegment.from_file(os.path.abspath(file), "wav")  # wav format input
+                case ".m4a":
+                    song = AudioSegment.from_file(os.path.abspath(file), "m4a")  # m4a format input
+                case _:
+                    continue
 
             match choice.get():
                 case ".mp3":
